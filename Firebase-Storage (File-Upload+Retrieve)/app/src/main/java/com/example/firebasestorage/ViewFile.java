@@ -40,8 +40,7 @@ public class ViewFile extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 UploadFile uploadFile = uploadFiles.get(position);
-                Intent intent = new Intent();
-                intent.setType(Intent.ACTION_VIEW);
+                Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(uploadFile.getUrl()));
                 startActivity(intent);
             }
